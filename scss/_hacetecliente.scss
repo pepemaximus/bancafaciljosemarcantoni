@@ -1,0 +1,111 @@
+/* INSTRUCCIONES ESPECIFICAS DE PÁGINA HACETE CLIENTE*/
+.haceteMain {
+    @include flex-column;
+    flex-wrap: wrap;
+    align-items: $centrar;
+    justify-content: $centrar;
+    text-align: $centrar;
+    width: 100%;
+    padding: 0px;
+}
+.tituloHaceteCliente, .haceteDetalle {
+    justify-content: $centrar; align-items: $centrar;
+    color: $color-texto-principal;
+    margin: 2%;
+    width: 100%;
+    font-size: 30px;
+}
+.haceteDetalle {
+    @include flex-row;
+}
+.tituloHaceteCliente {
+    @include flex-column;
+}
+.masVueltas {
+    @include flex-column;
+    flex-wrap: wrap;
+    height: 220px; width: 170px;
+    padding: 0.5%;
+    position: relative;
+    text-align: $centrar; color: #2A98D0;
+    top: 5%;
+    left: 5%;
+}
+#paraComenzar {
+    @include flex-column;
+    border-color: none;
+    border-width: 5px; border-style: none;
+    height: 60px; width: 230px;
+    padding: 0.5%;
+    position: relative;
+    top: 25%; left: 0px;
+    text-align: $centrar; color: $texto-negro;
+}
+.datosProspecto {
+    @include flex-column;
+    flex-wrap: wrap;
+    border-color: $color-borde-principal;
+    border-width: 2px; border-style: solid;
+    height: 200px; width: 220px;
+    padding: 2px;
+    margin: 2%;
+    position: relative;
+}
+#atencionRemota {
+    @include flex-column;
+    flex-wrap: wrap;
+    border-width: 1px; border-color: $color-borde-principal; border-style: solid;
+    align-items: $centrar;
+    margin: 0px;
+    max-width: 100%;
+    position: relative;
+    top: 15%;
+}
+#llamanos {
+    @include flex-column;
+    align-items: $centrar; justify-content: $centrar;
+    border-width: 1px; border-color: $color-borde-principal; border-style: solid;
+    margin: 1%;
+    width: 306px; height: 211px;
+    position: relative; top: 40px; left: 30%;
+}
+.textoDocumentos {
+    border-color: $color-de-fondo;
+    background-color: #62b9e4;
+    border-width: 2px; border-style: solid;
+    height: 90px; width: 150px;
+    padding: 0.5%;
+    position: relative;
+    text-align: $centrar; color: #22549e;
+    top: -10px;
+    left: 5%;
+}
+.pedidoDocumentos {
+    width: 100%;
+    background-color: $color-de-fondo;
+    padding: 0%;
+    margin: 0px;
+    text-align: $centrar; justify-content: $centrar; align-items: $centrar;
+}
+#haceteTextoRecuadro1 , #haceteTextoRecuadro2, #linkContacto {
+    @include flex-column;
+    flex-wrap: wrap;
+    height: 45px; width: 300px;
+    padding: 0%;
+    margin: 2px;
+    text-align: $centrar; justify-content: $centrar; align-items: $centrar;
+    color: $texto-negro;
+    position: relative; top: 5px; left: 17%;
+}
+#haceteTextoRecuadro1 , #haceteTextoRecuadro2 {
+    border-color: $color-borde-principal;
+    background-color: $color-de-fondo;
+    border-width: 2px; border-style: solid;
+}
+/*utilización de media query para acomodar texto y link a contacto*/
+@media only screen and (min-width: 425px) {
+    .pedidoDocumentos {
+        position: relative;
+        top: 30%; 
+    }
+}

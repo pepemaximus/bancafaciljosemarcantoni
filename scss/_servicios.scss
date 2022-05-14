@@ -1,0 +1,93 @@
+/* INSTRUCCIONES ESPECIFICAS DE PÁGINA SERVICIOS*/
+.serviciosMain {
+    @include flex-column;
+    align-items: $centrar;
+    justify-content: $centrar;
+    text-align: $centrar;
+    padding: 0%;
+}
+.tituloServicios {
+    font-size: 30px;
+    @include flex-row-space;
+    color: $color-texto-principal;
+    margin: 2%;
+    max-width: 100%;
+}
+.textoServicios {
+    @include flex-row-center;
+    align-items: center;
+    position: relative; top: 70px; left: 30%;
+    border-color: $color-borde-principal;
+    border-width: 2px; border-style: solid; padding: 2%;
+    height: auto; width: 270px;
+    background-color: $color-de-fondo;
+    max-width: 100%;
+}
+/*utilización de media query para acomodar el texto "textoServicios" al reducir la pantalla"*/
+@media only screen and (max-width: 600px) {
+    .textoServicios {
+        position: relative;
+        top: 0%; 
+        left: 0%;
+    }
+}
+.serviciosMain > .ol {
+    margin: 2%;
+}
+.compu {
+    @include flex-row;
+    text-align: $centrar; justify-content: $centrar;
+}
+#dineroAcompu {
+    border-width: 1px; border-color: $color-borde-principal; border-style: solid;
+    margin: 0%; padding: 0%;
+    width: 800px; height: 401px;
+    max-width: 100%;
+}
+.serviciosDetalle {
+    margin: 5px;
+}
+#comoTitulo {
+    position: relative;
+    display: inline;
+    color: $color-texto-principal;
+    @include flex-row-space;
+    margin: 3%;
+    width: 100%;
+    font-size: 30px;
+}
+.comoLoHacemos {
+    @include flex-column;
+    flex-wrap: wrap; 
+    border-color: $color-borde-principal;
+    border-width: 2px; border-style: solid;
+    height: auto; max-width: 400px;
+    padding: 2%;
+    margin: 1%;
+    text-align: $centrar; color: $texto-negro;
+    justify-content: space-around;
+    align-items: $centrar;
+}
+#noTePreocupesTitulo {
+    position: relative;
+    display: inline;
+    width: 200px;
+    color: $color-texto-principal;
+    margin: 3%;
+    max-width: 100%;
+}
+.lee {
+    position: relative;
+    display: inline-block;
+    max-width: 98%;
+    margin: 5px;
+}
+.parrafoNote {
+    position: relative;
+    display: inline-block;
+    border-color: $color-borde-principal;
+    border-width: 2px; border-style: solid;
+    min-height: 100px; max-width: 400px;
+    padding: 2%;
+    margin: 1%;
+}

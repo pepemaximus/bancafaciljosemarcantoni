@@ -1,0 +1,83 @@
+/* INSTRUCCIONES ESPECIFICAS DE PÁGINA QUIENES SOMOS*/
+.tituloQuienes {
+    text-align: $centrar;
+    @include flex-column;
+    text-align: $centrar;
+    font-size: 30px;
+}
+.textoQuienes {
+    height: 316px;
+    width: 300px;
+    background-color: white;  border-color: black; border-width: 2px;
+    border-style: solid;
+    text-align: $centrar;
+    position: relative;
+    top: 5%;
+    left: 6%;
+    color: $texto-negro;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    justify-content: $centrar; align-items: $centrar;
+}
+.quienesAyudaAbuela {
+    @include flex-row;
+    flex-wrap: wrap;
+    margin: 5px;
+    display: inline-block;
+}
+.parrafoQuienes {
+    @include flex-row;
+    flex-wrap: wrap;
+}
+.proposito {
+    border-width: 5px; border-style: none;
+    padding: 0.5%;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    top: 10px; left: 10px;
+    display: inline-block;  
+}
+.propositoTexto {
+    height: 286px;
+    width: 334px; max-width: 100%;
+    background-color: #2A98D0;  border-color: $color-borde-principal; border-width: 2px;
+    border-style: solid;
+    text-align: $centrar;
+    position: relative;
+    top: 7%;
+    left: 43%;
+    color: $texto-negro;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: flex; justify-content: $centrar; align-items: $centrar;
+}
+/*utilización de media query para acomodar el texto en el recuadro celeste de "propósito texto" al reducir la pantalla"*/
+@media only screen and (max-width: 600px) {
+    .propositoTexto {
+        position: relative;
+        top: 0%; 
+        left: 0%;
+    }
+}
+.imagenTeam {
+    display: inline-block;
+    top: 0%;
+    overflow-x: hidden;
+    background-image: url("./bancafacil/imagenes/team.jpg");
+    background-repeat: no-repeat; 
+    width: 100%;
+    max-width: 1024px;
+    background-position: $centrar; 
+    margin: 10px auto;
+}
+.quienesContacto {
+    @include flex-column;
+    flex-wrap: wrap;
+}
+.botonVolver {
+    display: flex; justify-content: $centrar; align-items: $centrar;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, 50%);
+}

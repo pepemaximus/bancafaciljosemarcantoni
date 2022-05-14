@@ -1,0 +1,67 @@
+/* INSTRUCCIONES ESPECIFICAS DE PÁGINA CONTACTO*/
+.main-flex-contacto > div {
+    @include flex-column;
+    align-items: $centrar;
+    justify-content: $centrar;
+    text-align: $centrar;
+}
+#tituloContacto {
+    @include flex-column;
+    text-align: $centrar;
+    color: $color-texto-principal;
+    margin: 0.5%;
+    animation-name: colortexto;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-size: 30px;
+}
+#callCenterImagen {
+    @include flex-column;
+    align-content: $centrar;
+    color: $color-texto-principal;
+    border-width: 1px; border-color: $color-borde-principal; border-style: solid;
+    border-radius: 25px;
+    margin: 1%;
+    width: 100%; height: auto; min-height: 150px;
+    animation-name: rotar;
+    animation-duration: 4s;
+}
+.formulario-contacto {
+    border-color: $color-borde-principal;
+    border-width: 2px; border-style: none;
+    height: 150px; max-width: 350px;
+    padding: 2%;
+    margin: 0.5%;
+    text-align: left; color: $texto-negro;    
+}
+.formulario-contacto-mensaje {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: $centrar;
+    height: 270px; width: 300px;
+    padding: 0%;
+    margin: 1%;
+    text-align: $centrar; color: black;    
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+/*utilización de media query para acomodar el typewriter y su formulario "formulario-contacto-mensaje" al reducir la pantalla"*/
+@media only screen and (max-width: 360px) {
+    .formulario-contacto-mensaje {
+        position: relative;
+        top: 40px; 
+        left: 0%;
+    }
+#servirteMensaje {
+    border-color: $color-borde-principal;
+    border-width: 2px; border-style: solid;
+}
+#textoFooterContacto {
+    @include flex-row;
+    justify-content: $centrar; 
+    margin: 0%; padding: 0%;
+    flex-wrap: wrap;
+    font-size: 130%; 
+    font-style: normal; font-variant: normal; font-weight: $negrita;
+}
+}

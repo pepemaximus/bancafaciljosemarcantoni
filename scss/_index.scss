@@ -1,0 +1,54 @@
+/*INSTRUCCIONES PARA PÁGINA INDEX*/
+.main-flex > div {
+    @include flex-row;
+    position: relative; top: 20px;
+    flex-direction: row;
+    align-items: $centrar;
+    justify-content: $centrar;
+    text-align: $centrar;
+    transition: all 0.5s ease-in;
+}
+.imagenContexto {
+    position: relative;
+    top: 15%;
+    left: 0%;
+    margin: 0%; padding: 0%;
+    display: flex; align-items: $centrar;
+}
+.landing-text {
+    height: auto; 
+    width: 17rem;
+    background-color: $color-de-fondo;  border-color: $color-borde-principal; border-width: 2px;
+    border-style: solid;
+    text-align: $centrar;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    @include flex-column; 
+    flex-wrap: wrap;
+    animation-duration: 3s;
+    animation-name: slidein;
+    position: relative; left: 5px; 
+}
+.strongbox {
+    @include flex-column; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative; right: 1%;
+}
+/*INSTRUCCIONES DE PÁGINA INDEX Y comunes con otras*/
+.landing-text:hover { /* ESTA SON LAS ANIMACIONES DEL LANDING TEXT DENTRO DEL CUADRO DE INDEX.HTML, CAMBIA DE COLOR AL POSAR EL MOUSE 
+    y viene desde la derecha*/
+background-color: $color-secundario;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
